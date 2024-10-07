@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "webpack",
+    "build-tailwind": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css",
+    "watch": "tailwind -i ./public/css/input -o ./public/css/output.css --watch",
+    "watch-webpack": "webpack --watch",
     "dev": "nodemon server.js"
   },
   "keywords": [],
@@ -20,8 +22,11 @@
     "@babel/preset-env": "^7.25.7",
     "@types/express": "^5.0.0",
     "@types/jquery": "^3.5.31",
+    "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
     "nodemon": "^3.1.7",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4"
   }
